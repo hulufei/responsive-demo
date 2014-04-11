@@ -21,4 +21,14 @@ $(function() {
       // Fix z-index for IE
       $(this).css('z-index', 1000 - i);
     });
+
+  // For mobile
+  // Expand menu
+  var $nav = $('#j-nav');
+  $('#j-menu').click(function() {
+    $nav.toggle();
+  });
+  $('#j-search').on('touchstart', function() {
+    $(this).sibling().focus();
+  });
 });
