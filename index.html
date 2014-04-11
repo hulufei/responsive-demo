@@ -2,120 +2,171 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>赛点 Sponia</title>
+  <link rel="stylesheet" href="pocketgrid.css" media="all">
   <link rel="stylesheet" href="style.css" media="all">
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+  <script src="js/jquery.slides.min.js"></script>
+  <script src="js/index.js"></script>
 </head>
 <body>
   <div class="header">
-    <div class="wrapper">
-      <h1>
-        赛点 Sponia
+    <div class="block-group wrapper">
+      <h1 class="block">
+        <a href="/">
+          <i class="icon-logo"></i>
+          赛点 Sponia
+        </a>
       </h1>
-      <div class="dropdown">
-        <div class="dropdown-hd"></div>
-        <ul class="dropdown-cnt">
-          <li>首页</li>
-          <li>资讯</li>
-          <li>数据</li>
-          <li>社区</li>
-        </ul>
-      </div>
-      <form action="">
-        <input type="text">
-        <button type="submit">Search</button>
+      <ul class="block nav">
+        <li class="nav-active"><a href="#">首页</a></li>
+        <li><a href="#">资讯</a></li>
+        <li><a href="#">数据</a></li>
+        <li><a href="#">社区</a></li>
+      </ul>
+      <form class="block search-form" action=".">
+        <label class="search-wrapper">
+          <input type="text">
+          <button type="submit">Search</button>
+        </label>
       </form>
     </div>
   </div>
 
   <div class="wrapper">
-    <div class="banner"></div>
+    <div class="main">
+      <div class="section banner" id="j-slides">
+        <img class="slide" src="img/banner-1.png" alt="">
+        <img class="slide" src="img/banner-2.png" alt="">
+        <img class="slide" src="img/banner-1.png" alt="">
+        <img class="slide" src="img/banner-2.png" alt="">
+      </div>
 
-    <div class="fixtures">
-      <h2>最新赛程</h2>
-      <div class="fixtures-item">
-        <span><i class="team-logo"></i>辽宁宏远</span>
-        <span class="datetime">
-          <span class="date">2013-10-15</span>
-          <span class="time">19:20</span>
-        </span>
-        <span><i class="team-logo"></i>广州恒大</span>
+      <div class="section fixtures">
+        <h2>最新赛程</h2>
+        <div class="dropdown" id="j-select">
+          <a class="dropdown-hd" href="javascript:;">选择球队</a>
+          <div class="dropdown-cnt">
+            <ul class="team-kinds">
+              <li>
+                热门球队
+                <ul class="team-list">
+                  <li>皇家马德里</li>
+                  <li>巴萨罗纳</li>
+                </ul>
+              </li>
+              <li>
+                超级联赛
+                <ul class="team-list">
+                  <li>皇家马德里</li>
+                  <li>巴萨罗纳</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="block-group fixtures-item">
+          <span class="block team">
+            <i class="team-logo icon-liaoning"></i>辽宁宏远
+          </span>
+          <span class="block datetime">
+            <span class="date">2013-10-15</span>
+            <span class="time">19:20</span>
+          </span>
+          <span class="block team">
+            <i class="team-logo icon-hengda"></i>广州恒大
+          </span>
+        </div>
+        <div class="block-group fixtures-item">
+          <span class="block team">
+            <i class="team-logo icon-liaoning"></i>辽宁宏远
+          </span>
+          <span class="block datetime">
+            <span class="date">2013-10-15</span>
+            <span class="time">19:20</span>
+          </span>
+          <span class="block team">
+            <i class="team-logo icon-hengda"></i>广州恒大
+          </span>
+        </div>
+        <div class="block-group fixtures-item">
+          <span class="block team">
+            <i class="team-logo icon-liaoning"></i>辽宁宏远
+          </span>
+          <span class="block datetime">
+            <span class="date">2013-10-15</span>
+            <span class="time">19:20</span>
+          </span>
+          <span class="block team">
+            <i class="team-logo icon-hengda"></i>广州恒大
+          </span>
+        </div>
+        <div class="block-group fixtures-item">
+          <span class="block team">
+            <i class="team-logo icon-liaoning"></i>辽宁宏远
+          </span>
+          <span class="block datetime">
+            <span class="date">2013-10-15</span>
+            <span class="time">19:20</span>
+          </span>
+          <span class="block team">
+            <i class="team-logo icon-hengda"></i>广州恒大
+          </span>
+        </div>
+        <a class="more" href="">MORE</a>
       </div>
-      <div class="fixtures-item">
-        <span><i class="team-logo"></i>辽宁宏远</span>
-        <span class="datetime">
-          <span class="date">2013-10-15</span>
-          <span class="time">19:20</span>
-        </span>
-        <span><i class="team-logo"></i>广州恒大</span>
-      </div>
-      <div class="fixtures-item">
-        <span><i class="team-logo"></i>广州恒大</span>
-        <span class="datetime">
-          <span class="date">2013-10-15</span>
-          <span class="time">19:20</span>
-        </span>
-        <span><i class="team-logo"></i>广州恒大</span>
-      </div>
-      <div class="fixtures-item">
-        <span><i class="team-logo"></i>广州恒大</span>
-        <span class="datetime">
-          <span class="date">2013-10-15</span>
-          <span class="time">19:20</span>
-        </span>
-        <span><i class="team-logo"></i>广州恒大</span>
-      </div>
-      <a class="more" href="">更多</a>
-    </div>
 
-    <div class="fans-comments">
-      <h2>球迷互动</h2>
-      <div class="comment">
-        <img class="avatar" src="" alt="">
-        <div class="comment-container">
-          <div class="comment-hd">
-            <span class="name">球迷拽拽哥</span>
-            <span class="versus">皇家马德里 vs 赛丽维亚</span>
+      <div class="section fans-comments">
+        <h2>球迷互动</h2>
+        <div class="comment">
+          <img class="avatar" src="img/avatar.png" alt="">
+          <div class="comment-container">
+            <div class="comment-hd">
+              <span class="name">球迷拽拽哥</span>
+              <span class="versus">皇家马德里 vs 赛丽维亚</span>
+            </div>
+            <div class="comment-cnt">
+              <p>赛丽维亚是C罗请来的</p>
+            </div>
           </div>
-          <div class="comment-cnt">
-            <p>赛丽维亚是C罗请来的</p>
+        </div>
+        <div class="comment">
+          <img class="avatar" src="img/avatar.png" alt="">
+          <div class="comment-container">
+            <div class="comment-hd">
+              <span class="name">球迷拽拽哥</span>
+              <span class="versus">皇家马德里 vs 赛丽维亚</span>
+            </div>
+            <div class="comment-cnt">
+              <p>C罗请来的</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="comment">
-        <img class="avatar" src="" alt="">
-        <div class="comment-container">
-          <div class="comment-hd">
-            <span class="name">球迷拽拽哥</span>
-            <span class="versus">皇家马德里 vs 赛丽维亚</span>
-          </div>
-          <div class="comment-cnt">
-            <p>C罗请来的</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="articles">
-      <h2>球坛动态</h2>
-      <div class="article">
-        <img class="figure" src="" alt="">
-        <div class="article-main">
-          <h3 class="article-title">中国足球队痛失客场好局</h3>
-          <div class="article-cnt">
-            <p>中国足球队１５日晚在客场对印度尼西亚队的２０１５年亚洲杯预选赛中痛失好局，在率先取得进球和控制了场面的情况下被对手的一次反击将比分扳为１:１平，出线前景不容乐观。中国队在战平印尼后积４分暂居Ｃ组第二名，而同组少赛一场的沙特阿拉伯队和伊拉克队分别以６分和３分位居第一名和第三名，印尼队则以１分垫底。</p>
+      <div class="section articles">
+        <h2>球坛动态</h2>
+        <div class="article">
+          <img class="figure" src="img/figure.png" alt="">
+          <div class="article-main">
+            <h3 class="article-title"><a href="#">中国足球队痛失客场好局</a></h3>
+            <div class="article-cnt">
+              <p>中国足球队１５日晚在客场对印度尼西亚队的２０１５年亚洲杯预选赛中痛失好局，在率先取得进球和控制了场面的情况下被对手的一次反击将比分扳为１:１平，出线前景不容乐观。中国队在战平印尼后积４分暂居Ｃ组第二名，而同组少赛一场的沙特阿拉伯队和伊拉克队分别以６分和３分位居第一名和第三名，印尼队则以１分垫底。</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="article">
-        <img class="figure" src="" alt="">
-        <div class="article-main">
-          <h3 class="article-title">贝尔若伤，皇马不亏;保险公司全额...</h3>
-          <div class="article-cnt">
-            <p>中国足球队１５日晚在客场对印度尼西亚队的２０１５年亚洲杯预选赛中痛失好局，在率先取得进球和控制了场面的情况下被对手的一次反击将比分扳为１:１平，出线前景不容乐观。中国队在战平印尼后积４分暂居Ｃ组第二名，而同组少赛一场的沙特阿拉伯队和伊拉克队分别以６分和３分位居第一名和第三名，印尼队则以１分垫底。</p>
+        <div class="article">
+          <img class="figure" src="img/figure.png" alt="">
+          <div class="article-main">
+            <h3 class="article-title"><a href="#">贝尔若伤，皇马不亏;保险公司全额...</a></h3>
+            <div class="article-cnt">
+              <p>中国足球队１５日晚在客场对印度尼西亚队的２０１５年亚洲杯预选赛中痛失好局，在率先取得进球和控制了场面的情况下被对手的一次反击将比分扳为１:１平，出线前景不容乐观。中国队在战平印尼后积４分暂居Ｃ组第二名，而同组少赛一场的沙特阿拉伯队和伊拉克队分别以６分和３分位居第一名和第三名，印尼队则以１分垫底。</p>
+            </div>
           </div>
         </div>
+        <a class="more" href="#">MORE</a>
       </div>
-      <a class="more" href="#">更多</a>
     </div>
   </div>
 
