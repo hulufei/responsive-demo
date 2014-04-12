@@ -2,7 +2,10 @@ $(function() {
   $('#j-slides').slidesjs({
     width: 620,
     height: 280,
-    navigation: false
+    navigation: false,
+    play: {
+      auto: true
+    }
   });
 
   // Select teams
@@ -28,7 +31,12 @@ $(function() {
   $('#j-menu').click(function() {
     $nav.toggle();
   });
-  $('#j-search').on('touchstart', function() {
-    $(this).sibling().focus();
-  });
+  $('#j-search')
+    .on('touchstart click', 'button', function() {
+      $(this).siblings('input').focus();
+    })
+    .on('submit', function() {
+      var v = $(this).find('input').val();
+      return !!$.trim(v);
+    });
 });
