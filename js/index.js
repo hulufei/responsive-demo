@@ -13,18 +13,11 @@ $(function() {
     .click(function() {
       $(this).toggleClass('dropdown-active');
     })
-<<<<<<< HEAD
-    .on('mouseenter', '.team-kinds > li', function() {
-      $(this).addClass('selected').siblings().removeClass('selected');
-    })
-    .on('mouseleave', '.team-kinds > li', function() {
-=======
     .on('mouseenter click', '.team-kind', function(e) {
       $(this).addClass('selected').siblings().removeClass('selected');
       e.stopPropagation();
     })
     .on('mouseleave', '.team-kind', function() {
->>>>>>> master
       $(this).removeClass('selected');
     })
     .find('.team-kinds > li')
@@ -36,11 +29,7 @@ $(function() {
   // For mobile
   // Expand menu
   var $nav = $('#j-nav');
-<<<<<<< HEAD
-  $('#j-menu').click(function() {
-=======
   $('#j-menu').add($nav).click(function() {
->>>>>>> master
     $nav.toggle();
   });
   $('#j-search')
