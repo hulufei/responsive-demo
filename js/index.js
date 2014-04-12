@@ -13,10 +13,11 @@ $(function() {
     .click(function() {
       $(this).toggleClass('dropdown-active');
     })
-    .on('mouseenter', '.team-kinds > li', function() {
+    .on('mouseenter click', '.team-kind', function(e) {
       $(this).addClass('selected').siblings().removeClass('selected');
+      e.stopPropagation();
     })
-    .on('mouseleave', '.team-kinds > li', function() {
+    .on('mouseleave', '.team-kind', function() {
       $(this).removeClass('selected');
     })
     .find('.team-kinds > li')
@@ -28,7 +29,7 @@ $(function() {
   // For mobile
   // Expand menu
   var $nav = $('#j-nav');
-  $('#j-menu').click(function() {
+  $('#j-menu').add($nav).click(function() {
     $nav.toggle();
   });
   $('#j-search')
