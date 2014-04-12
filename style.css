@@ -124,7 +124,7 @@ a {
     margin-top: -10px;
     border: none;
     color: transparent;
-    background: #fff url(img/icon-search.png);
+    background: #fff url(img/icon-search.png) no-repeat scroll center center;
     cursor: pointer;
   }
   .search-form input:focus {
